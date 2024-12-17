@@ -14,4 +14,222 @@
     margin-top: 1em;
   }
   .section {
-    
+    margin-bottom: 2em;
+  }
+  .modes-list {
+    list-style: none;
+    padding: 0;
+  }
+  .modes-list li {
+    margin: 0.5em 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 1em;
+  }
+  th, td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background: #f5f5f5;
+  }
+  .resources-list, .archive-list {
+    list-style: none;
+    padding: 0;
+  }
+  .resources-list li, .archive-list li {
+    margin: 0.5em 0;
+  }
+  .header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5em;
+  }
+
+  /* Optional: Basic styling for timer area */
+  .timer-section {
+    margin-top: 1em;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+  }
+  .timer-section p {
+    margin: 0.5em 0;
+  }
+  .timer-section button {
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Competitive Edge</h1>
+  <p><em>Your gamified research hub for daily insight challenges.</em></p>
+</header>
+
+<section class="section">
+  <h2>Welcome & Instructions</h2>
+  <p>This is your interactive research environment. Choose a mode, set your timer, gather and verify insights, and track your progress. Treat each session like a competitive challenge—improve your skills over time and watch your “score” grow.</p>
+</section>
+
+<section class="section">
+  <h2>Select Your Mode</h2>
+  <ul class="modes-list">
+    <li><strong><a href="#data-dash">Data Dash</a></strong> (Solo TDM)</li>
+    <li><strong><a href="#market-share-domination">Market Share Domination</a></strong> (Solo Domination)</li>
+    <li><strong><a href="#rotating-focus">Rotating Focus</a></strong> (Solo Hardpoint)</li>
+    <li><strong><a href="#insight-confirmed">Insight Confirmed</a></strong> (Solo Kill Confirmed)</li>
+    <li><strong><a href="#hypothesize-validate">Hypothesize & Validate</a></strong> (Solo Search & Destroy)</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 id="data-dash">Data Dash Instructions</h2>
+  <p><em>Objective:</em> Generate as many verified insights as possible within a set time.</p>
+  <ol>
+    <li>Choose a topic area (e.g., Eco-friendly packaging).</li>
+    <li>Set a timer (20-30 minutes).</li>
+    <li>Collect as many data-backed insights as you can, verifying each with a second source.</li>
+    <li>Score = number of confirmed insights.</li>
+    <li>Try to improve your count in future sessions.</li>
+  </ol>
+  
+  <!-- Timer Section Added -->
+  <div class="timer-section">
+    <h3>Session Timer</h3>
+    <p>Time Elapsed: <span id="timer-display">0</span> seconds</p>
+    <button id="start-timer">Start Timer</button>
+    <button id="stop-timer">Stop Timer</button>
+  </div>
+</section>
+
+<section class="section">
+  <h2 id="market-share-domination">Market Share Domination Instructions</h2>
+  <p><em>Objective:</em> “Capture” a niche by understanding it deeply and keeping it updated over time.</p>
+  <ol>
+    <li>Select 2-3 market niches.</li>
+    <li>Establish a baseline understanding with a short research session.</li>
+    <li>Periodically update your notes with new data to maintain “domination.”</li>
+    <li>Score over time: more sustained niches = higher score.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2 id="rotating-focus">Rotating Focus Instructions</h2>
+  <p><em>Objective:</em> Change research topics daily or periodically, capturing at least one new insight each session.</p>
+  <ol>
+    <li>Create a rotation schedule (e.g., Mon: Competitor Analysis, Tue: Consumer Trends...).</li>
+    <li>Set a short time block each day for that topic.</li>
+    <li>Collect one actionable insight per session.</li>
+    <li>Score daily and see how many consecutive days you maintain quality insights.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2 id="insight-confirmed">Insight Confirmed Instructions</h2>
+  <p><em>Objective:</em> Each insight must be immediately verified by a second source to count.</p>
+  <ol>
+    <li>Select a broad topic (e.g., DTC food brands).</li>
+    <li>Set a timeframe (30 mins).</li>
+    <li>Each insight must be confirmed right away with a reliable source.</li>
+    <li>Unconfirmed or refuted insights don’t count.</li>
+    <li>Score at end = total confirmed insights.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2 id="hypothesize-validate">Hypothesize & Validate Instructions</h2>
+  <p><em>Objective:</em> Propose one hypothesis and gather supporting evidence within a limited time, no second chances.</p>
+  <ol>
+    <li>Formulate a single hypothesis (e.g., “A major retailer will introduce a budget-friendly line this quarter”).</li>
+    <li>Set a timer (30 mins).</li>
+    <li>Find strong evidence within that time. If successful, you score a point.</li>
+    <li>If not supported, learn from the attempt and try again another day.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>Session Tracker</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Mode</th>
+        <th>Insights/Points</th>
+        <th>Focus Area</th>
+        <th>Time Spent (min)</th>
+        <th>Notes/Reflections</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2024-12-16</td>
+        <td>Data Dash</td>
+        <td>5</td>
+        <td>Eco-friendly packaging</td>
+        <td>30</td>
+        <td>Improved verification speed</td>
+      </tr>
+      <!-- Add more rows as you track sessions -->
+    </tbody>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Progress & Achievements</h2>
+  <p>Total Insights Earned: <strong>5</strong> (Example)</p>
+  <p>Milestones:</p>
+  <ul>
+    <li>10 Insights: Level 2 Researcher</li>
+    <li>25 Insights: Level 3 Researcher</li>
+    <li>50 Insights: Market Master</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Resources & Tools</h2>
+  <ul class="resources-list">
+    <li><a href="https://www.statista.com/" target="_blank">Statista</a></li>
+    <li><a href="https://trends.google.com/" target="_blank">Google Trends</a></li>
+    <li><a href="https://data.gov/" target="_blank">data.gov</a></li>
+    <li><a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a></li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Archive & References</h2>
+  <ul class="archive-list">
+    <li>Past Insights (link to another page or document)</li>
+    <li>Previous Hypotheses & Outcomes</li>
+    <li>Archived Market Notes</li>
+  </ul>
+</section>
+
+<script>
+  let startTime;
+  let interval;
+
+  const startBtn = document.getElementById('start-timer');
+  const stopBtn = document.getElementById('stop-timer');
+  const timerDisplay = document.getElementById('timer-display');
+
+  startBtn.addEventListener('click', () => {
+    startTime = Date.now();
+    clearInterval(interval); // Ensure no multiple intervals
+    interval = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      timerDisplay.textContent = elapsed;
+    }, 1000);
+  });
+
+  stopBtn.addEventListener('click', () => {
+    clearInterval(interval);
+  });
+</script>
+
+</body>
+</html>
