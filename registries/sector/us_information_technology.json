@@ -1,0 +1,144 @@
+{
+  "registry_id": "sector.us.information_technology",
+  "registry_type": "sector",
+  "name": "U.S. Information Technology Sector Registry",
+  "_comment": "Defines sub-industries, analytical intent, and deterministic visibility rules for the U.S. IT sector.",
+  "jurisdiction": "United States",
+  "parent_registry": "registries/macro/us.json",
+  "sector_scope": {
+    "sector_name": "Information Technology",
+    "taxonomy_reference": "GICS (high-level alignment, not a score)",
+    "sub_industries": [
+      {
+        "id": "software",
+        "name": "Software",
+        "description": "Enterprise, application, and infrastructure software providers."
+      },
+      {
+        "id": "it_services",
+        "name": "IT Services",
+        "description": "Systems integration, managed services, and consulting."
+      },
+      {
+        "id": "semiconductors",
+        "name": "Semiconductors & Semiconductor Equipment",
+        "description": "Chip design, fabrication, and equipment suppliers."
+      },
+      {
+        "id": "hardware",
+        "name": "Technology Hardware, Storage & Peripherals",
+        "description": "Devices, storage, and related hardware ecosystems."
+      },
+      {
+        "id": "communications_equipment",
+        "name": "Communications Equipment",
+        "description": "Networking, telecom, and infrastructure equipment."
+      },
+      {
+        "id": "electronic_components",
+        "name": "Electronic Components & Instruments",
+        "description": "Specialty components and instrumentation for tech supply chains."
+      }
+    ]
+  },
+  "core_analytical_questions": [
+    "Which regulatory and standards bodies constrain product design, data handling, and security requirements?",
+    "What are the principal demand drivers (enterprise spend, consumer upgrades, cloud adoption, public sector procurement)?",
+    "Where are supply chain chokepoints (fabs, advanced packaging, critical components)?",
+    "What is the durability of competitive advantages (intellectual property, platform lock-in, ecosystem switching costs)?",
+    "How exposed is the sub-industry to export controls or spectrum policy shifts?",
+    "What is the lifecycle cadence (hardware refresh, software renewal, services contracts)?"
+  ],
+  "key_operating_metrics": [
+    {
+      "metric": "Recurring revenue mix",
+      "description": "Share of revenue tied to subscriptions, maintenance, or contracted services."
+    },
+    {
+      "metric": "Customer retention and churn",
+      "description": "Stability of installed base and renewal behavior."
+    },
+    {
+      "metric": "Gross margin profile",
+      "description": "Indicative of pricing power and supply chain resilience."
+    },
+    {
+      "metric": "R&D intensity",
+      "description": "Commitment to innovation relative to operating scale."
+    },
+    {
+      "metric": "Backlog and bookings",
+      "description": "Forward demand visibility for services and equipment."
+    },
+    {
+      "metric": "Capacity utilization",
+      "description": "Relevant for semiconductor manufacturing and equipment providers."
+    },
+    {
+      "metric": "Security incident exposure",
+      "description": "Operational risk tied to cybersecurity performance and disclosures."
+    }
+  ],
+  "allowed_domain_authorities": [
+    "sec",
+    "fcc",
+    "uspto",
+    "bis",
+    "nist",
+    "federal_reserve",
+    "us_treasury"
+  ],
+  "allowed_source_ids": [
+    "sec_edgar",
+    "fcc_orders",
+    "uspto_patent_data",
+    "bis_export_controls",
+    "nist_publications",
+    "federal_register",
+    "treasury_reports"
+  ],
+  "visibility_rules": {
+    "_comment": "Deterministic tier-based visibility. Higher tiers are always visible to lower tiers.",
+    "tier_visibility": {
+      "tier_1_constitutional": {
+        "visible_tiers": [
+          "tier_1_constitutional",
+          "tier_2_regulatory",
+          "tier_3_market_infrastructure",
+          "tier_4_industry"
+        ]
+      },
+      "tier_2_regulatory": {
+        "visible_tiers": [
+          "tier_2_regulatory",
+          "tier_3_market_infrastructure",
+          "tier_4_industry"
+        ]
+      },
+      "tier_3_market_infrastructure": {
+        "visible_tiers": [
+          "tier_3_market_infrastructure",
+          "tier_4_industry"
+        ]
+      },
+      "tier_4_industry": {
+        "visible_tiers": ["tier_4_industry"]
+      }
+    },
+    "primary_source_override": true
+  },
+  "constraints": {
+    "_comment": "Sector registry inherits from macro and country registries.",
+    "must_comply_with": [
+      "registries/macro/us.json",
+      "registries/country/us.json"
+    ],
+    "allowed_authority_tiers": [
+      "tier_1_constitutional",
+      "tier_2_regulatory",
+      "tier_3_market_infrastructure",
+      "tier_4_industry"
+    ],
+    "sources_must_be_listed_in_parent": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "registries/schema/institution.registry.schema.json",
+  "title": "Institution Registry Schema",
+  "type": "object",
+  "_comment": "Defines the minimal, reusable structure for authoritative institutions in registries.",
+  "required": ["id", "name", "category", "jurisdiction", "authority_tier", "roles"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable, human-readable identifier."
+    },
+    "name": {
+      "type": "string",
+      "description": "Official institution name."
+    },
+    "category": {
+      "type": "string",
+      "description": "Institution category, e.g., government, regulator, standards body, exchange."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Jurisdiction the institution is accountable to."
+    },
+    "authority_tier": {
+      "type": "string",
+      "description": "Categorical authority tier (no scores)."
+    },
+    "roles": {
+      "type": "array",
+      "description": "Explicit institutional roles (policy, statistical, regulatory, market infrastructure).",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "domains": {
+      "type": "array",
+      "description": "Domains the institution can authoritatively cover.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "description": "Lifecycle status.",
+      "enum": ["active", "inactive"]
+    },
+    "links": {
+      "type": "array",
+      "description": "Official URLs for reference.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    }
+  },
+  "additionalProperties": false
+}
