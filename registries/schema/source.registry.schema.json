@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "registries/schema/source.registry.schema.json",
+  "title": "Source Registry Schema",
+  "type": "object",
+  "_comment": "Defines the reusable structure for sources, always subordinate to a registry.",
+  "required": [
+    "id",
+    "name",
+    "publisher_institution_id",
+    "source_type",
+    "authority_tier",
+    "domains",
+    "intent",
+    "access"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable, human-readable identifier."
+    },
+    "name": {
+      "type": "string",
+      "description": "Source name as published."
+    },
+    "publisher_institution_id": {
+      "type": "string",
+      "description": "Institution that publishes the source."
+    },
+    "source_type": {
+      "type": "string",
+      "description": "Categorical type of source (primary, secondary)."
+    },
+    "authority_tier": {
+      "type": "string",
+      "description": "Tier assigned by registry (no scoring)."
+    },
+    "domains": {
+      "type": "array",
+      "description": "Domains this source is allowed to cover.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "intent": {
+      "type": "string",
+      "description": "Why the source exists (policy, statistics, disclosure, standards)."
+    },
+    "access": {
+      "type": "object",
+      "description": "How to access the source.",
+      "required": ["method", "url"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "description": "Access method (website, api, filing, report)."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "precedence": {
+      "type": "string",
+      "description": "Declarative precedence rule, used by registries to resolve conflicts."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive"]
+    }
+  },
+  "additionalProperties": false
+}

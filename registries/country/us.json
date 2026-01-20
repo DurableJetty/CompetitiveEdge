@@ -1,0 +1,408 @@
+{
+  "registry_id": "country.us",
+  "registry_type": "country",
+  "name": "United States Country Registry",
+  "_comment": "Defines U.S. constitutional institutions and the only allowed primary sources for the system.",
+  "jurisdiction": "United States",
+  "authority_tiers": [
+    {
+      "tier": "tier_1_constitutional",
+      "description": "Constitutional or sovereign authority (foundational government bodies)."
+    },
+    {
+      "tier": "tier_2_regulatory",
+      "description": "Statutory regulators and statistical agencies with formal mandates."
+    },
+    {
+      "tier": "tier_3_market_infrastructure",
+      "description": "Market infrastructure and infrastructure-like authorities (exchanges, clearing, payment systems)."
+    },
+    {
+      "tier": "tier_4_industry",
+      "description": "Industry bodies and standards organizations (informational, non-sovereign)."
+    }
+  ],
+  "institutions": [
+    {
+      "id": "us_congress",
+      "name": "United States Congress",
+      "category": "government",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_1_constitutional",
+      "roles": ["legislative"],
+      "domains": ["law", "policy"],
+      "status": "active",
+      "links": ["https://www.congress.gov/"]
+    },
+    {
+      "id": "us_treasury",
+      "name": "U.S. Department of the Treasury",
+      "category": "government",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_1_constitutional",
+      "roles": ["policy", "finance"],
+      "domains": ["fiscal", "debt", "financial_stability"],
+      "status": "active",
+      "links": ["https://home.treasury.gov/"]
+    },
+    {
+      "id": "federal_reserve",
+      "name": "Federal Reserve System",
+      "category": "central_bank",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_1_constitutional",
+      "roles": ["monetary_policy", "financial_stability"],
+      "domains": ["monetary", "banking", "payments"],
+      "status": "active",
+      "links": ["https://www.federalreserve.gov/"]
+    },
+    {
+      "id": "bea",
+      "name": "Bureau of Economic Analysis",
+      "category": "statistical_agency",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["statistics"],
+      "domains": ["national_accounts", "trade", "income"],
+      "status": "active",
+      "links": ["https://www.bea.gov/"]
+    },
+    {
+      "id": "bls",
+      "name": "Bureau of Labor Statistics",
+      "category": "statistical_agency",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["statistics"],
+      "domains": ["labor", "prices"],
+      "status": "active",
+      "links": ["https://www.bls.gov/"]
+    },
+    {
+      "id": "census",
+      "name": "U.S. Census Bureau",
+      "category": "statistical_agency",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["statistics"],
+      "domains": ["demographics", "housing", "business"],
+      "status": "active",
+      "links": ["https://www.census.gov/"]
+    },
+    {
+      "id": "sec",
+      "name": "U.S. Securities and Exchange Commission",
+      "category": "regulator",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["regulation", "disclosure"],
+      "domains": ["securities", "reporting"],
+      "status": "active",
+      "links": ["https://www.sec.gov/"]
+    },
+    {
+      "id": "fcc",
+      "name": "Federal Communications Commission",
+      "category": "regulator",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["regulation"],
+      "domains": ["communications", "spectrum"],
+      "status": "active",
+      "links": ["https://www.fcc.gov/"]
+    },
+    {
+      "id": "uspto",
+      "name": "U.S. Patent and Trademark Office",
+      "category": "regulator",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["intellectual_property"],
+      "domains": ["patents", "trademarks"],
+      "status": "active",
+      "links": ["https://www.uspto.gov/"]
+    },
+    {
+      "id": "bis",
+      "name": "Bureau of Industry and Security",
+      "category": "regulator",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["export_controls"],
+      "domains": ["trade", "technology"],
+      "status": "active",
+      "links": ["https://www.bis.doc.gov/"]
+    },
+    {
+      "id": "cftc",
+      "name": "U.S. Commodity Futures Trading Commission",
+      "category": "regulator",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["regulation"],
+      "domains": ["derivatives", "markets"],
+      "status": "active",
+      "links": ["https://www.cftc.gov/"]
+    },
+    {
+      "id": "fdic",
+      "name": "Federal Deposit Insurance Corporation",
+      "category": "regulator",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["banking_supervision"],
+      "domains": ["banking", "financial_stability"],
+      "status": "active",
+      "links": ["https://www.fdic.gov/"]
+    },
+    {
+      "id": "occ",
+      "name": "Office of the Comptroller of the Currency",
+      "category": "regulator",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_2_regulatory",
+      "roles": ["banking_supervision"],
+      "domains": ["banking"],
+      "status": "active",
+      "links": ["https://www.occ.gov/"]
+    },
+    {
+      "id": "finra",
+      "name": "Financial Industry Regulatory Authority",
+      "category": "self_regulatory_organization",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_3_market_infrastructure",
+      "roles": ["market_supervision"],
+      "domains": ["broker_dealers"],
+      "status": "active",
+      "links": ["https://www.finra.org/"]
+    },
+    {
+      "id": "nyse",
+      "name": "New York Stock Exchange",
+      "category": "exchange",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_3_market_infrastructure",
+      "roles": ["listing", "market_infrastructure"],
+      "domains": ["equities"],
+      "status": "active",
+      "links": ["https://www.nyse.com/"]
+    },
+    {
+      "id": "nasdaq",
+      "name": "Nasdaq",
+      "category": "exchange",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_3_market_infrastructure",
+      "roles": ["listing", "market_infrastructure"],
+      "domains": ["equities"],
+      "status": "active",
+      "links": ["https://www.nasdaq.com/"]
+    },
+    {
+      "id": "nist",
+      "name": "National Institute of Standards and Technology",
+      "category": "standards_body",
+      "jurisdiction": "United States",
+      "authority_tier": "tier_4_industry",
+      "roles": ["standards"],
+      "domains": ["technology", "cybersecurity"],
+      "status": "active",
+      "links": ["https://www.nist.gov/"]
+    }
+  ],
+  "allowed_sources": [
+    {
+      "id": "federal_register",
+      "name": "Federal Register",
+      "publisher_institution_id": "us_congress",
+      "source_type": "primary",
+      "authority_tier": "tier_1_constitutional",
+      "domains": ["law", "policy"],
+      "intent": "Official publication of U.S. government rules and notices.",
+      "access": {
+        "method": "website",
+        "url": "https://www.federalregister.gov/"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "treasury_reports",
+      "name": "Treasury Reports",
+      "publisher_institution_id": "us_treasury",
+      "source_type": "primary",
+      "authority_tier": "tier_1_constitutional",
+      "domains": ["fiscal", "debt", "financial_stability"],
+      "intent": "Official fiscal, debt, and stability reports.",
+      "access": {
+        "method": "website",
+        "url": "https://home.treasury.gov/data"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "fomc_statements",
+      "name": "FOMC Statements & Minutes",
+      "publisher_institution_id": "federal_reserve",
+      "source_type": "primary",
+      "authority_tier": "tier_1_constitutional",
+      "domains": ["monetary", "banking"],
+      "intent": "Official monetary policy decisions and rationale.",
+      "access": {
+        "method": "website",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "federal_reserve_data",
+      "name": "Federal Reserve Data Releases",
+      "publisher_institution_id": "federal_reserve",
+      "source_type": "primary",
+      "authority_tier": "tier_1_constitutional",
+      "domains": ["monetary", "banking", "payments"],
+      "intent": "Official data releases and statistical releases from the Federal Reserve.",
+      "access": {
+        "method": "website",
+        "url": "https://www.federalreserve.gov/data.htm"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "bea_national_accounts",
+      "name": "BEA National Accounts",
+      "publisher_institution_id": "bea",
+      "source_type": "primary",
+      "authority_tier": "tier_2_regulatory",
+      "domains": ["national_accounts", "trade", "income"],
+      "intent": "Official national accounts and GDP releases.",
+      "access": {
+        "method": "website",
+        "url": "https://www.bea.gov/data"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "bls_statistics",
+      "name": "BLS Statistics",
+      "publisher_institution_id": "bls",
+      "source_type": "primary",
+      "authority_tier": "tier_2_regulatory",
+      "domains": ["labor", "prices"],
+      "intent": "Official labor market and price statistics.",
+      "access": {
+        "method": "website",
+        "url": "https://www.bls.gov/data/"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "census_econ",
+      "name": "Census Economic Data",
+      "publisher_institution_id": "census",
+      "source_type": "primary",
+      "authority_tier": "tier_2_regulatory",
+      "domains": ["demographics", "housing", "business"],
+      "intent": "Official demographic and business statistics.",
+      "access": {
+        "method": "website",
+        "url": "https://www.census.gov/econ/"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "sec_edgar",
+      "name": "SEC EDGAR",
+      "publisher_institution_id": "sec",
+      "source_type": "primary",
+      "authority_tier": "tier_2_regulatory",
+      "domains": ["securities", "reporting"],
+      "intent": "Official corporate disclosures and filings.",
+      "access": {
+        "method": "website",
+        "url": "https://www.sec.gov/edgar"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "fcc_orders",
+      "name": "FCC Orders & Rulemakings",
+      "publisher_institution_id": "fcc",
+      "source_type": "primary",
+      "authority_tier": "tier_2_regulatory",
+      "domains": ["communications", "spectrum"],
+      "intent": "Official communications policy, spectrum allocation, and rulemaking.",
+      "access": {
+        "method": "website",
+        "url": "https://www.fcc.gov/document-search"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "uspto_patent_data",
+      "name": "USPTO Patent Data",
+      "publisher_institution_id": "uspto",
+      "source_type": "primary",
+      "authority_tier": "tier_2_regulatory",
+      "domains": ["patents", "trademarks"],
+      "intent": "Official patent and trademark filings data.",
+      "access": {
+        "method": "website",
+        "url": "https://developer.uspto.gov/"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "bis_export_controls",
+      "name": "BIS Export Control Rules",
+      "publisher_institution_id": "bis",
+      "source_type": "primary",
+      "authority_tier": "tier_2_regulatory",
+      "domains": ["trade", "technology"],
+      "intent": "Official export control rules affecting technology industries.",
+      "access": {
+        "method": "website",
+        "url": "https://www.bis.doc.gov/index.php/policy-guidance/ear"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    },
+    {
+      "id": "nist_publications",
+      "name": "NIST Standards & Publications",
+      "publisher_institution_id": "nist",
+      "source_type": "primary",
+      "authority_tier": "tier_4_industry",
+      "domains": ["technology", "cybersecurity"],
+      "intent": "Official standards and technical references.",
+      "access": {
+        "method": "website",
+        "url": "https://www.nist.gov/publications"
+      },
+      "precedence": "primary_over_secondary",
+      "status": "active"
+    }
+  ],
+  "constraints": {
+    "_comment": "Higher-level constraints that all downstream registries must honor.",
+    "primary_sources_override_secondary": true,
+    "allowed_authority_tiers": [
+      "tier_1_constitutional",
+      "tier_2_regulatory",
+      "tier_3_market_infrastructure",
+      "tier_4_industry"
+    ],
+    "required_jurisdiction": "United States",
+    "sources_must_reference_institutions": true
+  }
+}

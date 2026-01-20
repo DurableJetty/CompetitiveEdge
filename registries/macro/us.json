@@ -1,0 +1,105 @@
+{
+  "registry_id": "macro.us",
+  "registry_type": "macro",
+  "name": "United States Macro Registry",
+  "_comment": "Defines authoritative macro series, policy events, and publishers under the U.S. country registry.",
+  "jurisdiction": "United States",
+  "parent_registry": "registries/country/us.json",
+  "macro_series": [
+    {
+      "id": "gdp",
+      "name": "Gross Domestic Product",
+      "description": "National accounts output measure.",
+      "primary_publisher_ids": ["bea"],
+      "allowed_source_ids": ["bea_national_accounts"],
+      "release_cadence": "quarterly"
+    },
+    {
+      "id": "pce_prices",
+      "name": "Personal Consumption Expenditures Price Index",
+      "description": "Inflation measure tied to consumption.",
+      "primary_publisher_ids": ["bea"],
+      "allowed_source_ids": ["bea_national_accounts"],
+      "release_cadence": "monthly"
+    },
+    {
+      "id": "cpi",
+      "name": "Consumer Price Index",
+      "description": "Consumer price inflation measure.",
+      "primary_publisher_ids": ["bls"],
+      "allowed_source_ids": ["bls_statistics"],
+      "release_cadence": "monthly"
+    },
+    {
+      "id": "employment_situation",
+      "name": "Employment Situation",
+      "description": "Labor market employment and unemployment statistics.",
+      "primary_publisher_ids": ["bls"],
+      "allowed_source_ids": ["bls_statistics"],
+      "release_cadence": "monthly"
+    },
+    {
+      "id": "retail_sales",
+      "name": "Retail Sales",
+      "description": "Consumer spending activity measure.",
+      "primary_publisher_ids": ["census"],
+      "allowed_source_ids": ["census_econ"],
+      "release_cadence": "monthly"
+    },
+    {
+      "id": "housing_starts",
+      "name": "Housing Starts",
+      "description": "Residential construction activity.",
+      "primary_publisher_ids": ["census"],
+      "allowed_source_ids": ["census_econ"],
+      "release_cadence": "monthly"
+    },
+    {
+      "id": "industrial_production",
+      "name": "Industrial Production",
+      "description": "Manufacturing, mining, and utilities output.",
+      "primary_publisher_ids": ["federal_reserve"],
+      "allowed_source_ids": ["federal_reserve_data"],
+      "release_cadence": "monthly"
+    }
+  ],
+  "policy_events": [
+    {
+      "id": "fomc_meeting",
+      "name": "FOMC Policy Decision",
+      "primary_publisher_ids": ["federal_reserve"],
+      "allowed_source_ids": ["fomc_statements"],
+      "intent": "Official monetary policy setting and forward guidance."
+    },
+    {
+      "id": "treasury_auction",
+      "name": "Treasury Debt Auction",
+      "primary_publisher_ids": ["us_treasury"],
+      "allowed_source_ids": ["treasury_reports"],
+      "intent": "Official debt issuance schedule and results."
+    },
+    {
+      "id": "federal_register_rule",
+      "name": "Federal Register Rulemaking",
+      "primary_publisher_ids": ["us_congress"],
+      "allowed_source_ids": ["federal_register"],
+      "intent": "Official regulatory changes affecting macro conditions."
+    }
+  ],
+  "primary_publishers": [
+    "bea",
+    "bls",
+    "census",
+    "federal_reserve",
+    "us_treasury"
+  ],
+  "constraints": {
+    "_comment": "Macro registry inherits U.S. authority tiers and primary-source precedence.",
+    "must_comply_with": ["registries/country/us.json"],
+    "allowed_authority_tiers": [
+      "tier_1_constitutional",
+      "tier_2_regulatory"
+    ],
+    "primary_sources_only": true
+  }
+}
